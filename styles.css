@@ -1,0 +1,204 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light blue background color */
+}
+
+/* Header and navigation */
+header {
+    background-color: #384e6f; /* Dark blue background color */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger icon */
+#hamburgerIcon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Make nav menu hidden by default on smaller screens */
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* Class for visible nav menu */
+nav ul.visible {
+    display: flex;
+}
+
+/* About Me section */
+#about-me {
+    padding: 2rem;
+    text-align: center;
+    background-color: #cadded; /* Lighter blue background color */
+}
+
+#about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+}
+
+/* Projects section */
+#projects {
+    padding: 2rem;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.project figcaption {
+    margin-top: 0.5rem;
+}
+
+/* Skills section */
+#skills {
+    padding: 2rem;
+    background-color: #d5e2ec; /* Lighter blue background color */
+    text-align: center;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Contact section */
+#contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact label {
+    margin: 0.5rem 0;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#contact button {
+    padding: 0.5rem 1rem;
+    background-color: #1f4681; /* Dark blue background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul.visible {
+        display: flex;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    #hamburgerIcon {
+        display: block;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 90%;
+    }
+}
+
+/* Vendor Prefixes */
+input, textarea {
+    -webkit-appearance: none; /* Chrome, Safari */
+    -moz-appearance: none; /* Firefox */
+    appearance: none;
+}
+
+/* Ensure cross-browser compatibility for flexbox */
+.project {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
